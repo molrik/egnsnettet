@@ -8,7 +8,7 @@
         name="MAX_FILE_SIZE"
         value="300000000"
         type="hidden">
-      <table width="100%" border="0" cellspacing="2" cellpadding="0">
+      <table width="100%" border="0" cellspacing="2" cellpadding="0" class="egn_kontakt_tabel">
       	<tr>
         	<td colspan="3">        
       		<!-- ###HEADER_STD### begin -->
@@ -24,21 +24,41 @@
     </tr>
     <tr>
       <td colspan="2">
-      	<input type="text" name="tx_pilmailform_pi1[text][name]" value="###NAME_VAL###" id="name" class="egn_textinput egn_mandatory" />
+      	<input type="text" name="tx_pilmailform_pi1[text][name]" value="###NAME_VAL###" id="name" class="egn_textinput egn_mandatory egn_kontakt" />
       </td>
       <td>
         <span class="alert">###NAME_ERR_TXT###</span>
       </td>
     </tr>
     <tr>
-      <td colspan="3"><label for="email" class="egn_inputlabel"><acronym title="Som der kan svares til">Din e-mail adresse:</acronym></label></td>
+      <td colspan="3"><label for="email" class="egn_inputlabel egn_mandatory"><acronym title="Som der kan svares til">Din e-mail adresse:</acronym></label></td>
    </tr>
    <tr>
       <td colspan="2">
-      	<input type="text" name="tx_pilmailform_pi1[text][email]" value="###EMAIL_VAL###" id="email" class="egn_textinput" />
+      	<input type="text" name="tx_pilmailform_pi1[text][email]" value="###EMAIL_VAL###" id="email" class="egn_textinput egn_mandatory egn_kontakt" />
       </td>
       <td>	
         <span class="alert"><!-- ###HEADER_EMAIL_INVALID### begin -->Dette er ikke en gyldig mail-adresse!<!-- ###HEADER_EMAIL_INVALID### end --> ###EMAIL_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><label for="subject" class="egn_inputlabel">Besked-emne:</label></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<input type="text" name="tx_pilmailform_pi1[text][subject]" value="###SUBJECT_VAL###" id="subject" class="egn_textinput egn_kontakt" />
+      </td>
+      <td>
+        <span class="alert">###SUBJECT_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_spacerrow"><td colspan="3" class="egn_spacercell" height="5"> </td></tr>
+    <tr class="">
+      <td colspan="3"><label for="besked" class="egn_inputlabel">Indtast din besked:</label></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      	<textarea name="tx_pilmailform_pi1[textarea][besked]" cols="50" rows="7">###BESKED_VAL###</textarea><span class="alert">###BESKED_ERR_TXT###</span>
       </td>
     </tr>
 
@@ -75,12 +95,13 @@
 <p><em>Mail txt</em></p>
 
     <!-- ###TMAIL_MAIL### begin -->
-    Kontaktformular.
+    Henvendelse via egnsnettets kontaktformular.
+        
+    ###NAME_VAL### (###EMAIL_VAL###) her sendt: 
     
-    Brugeren har oplyst:
+    ###SUBJECT_VAL###
     
-    ###NAME_VAL###
-    ###EMAIL_VAL###
+    ###BESKED_VAL###
     
     ----------------
     
@@ -92,13 +113,13 @@
 <p><em>Mail html</em></p>
     
     <!-- ###TMAIL_MAIL_HTML### begin -->
-    <h3>Kontaktformular</h3>
-    <p>Bruger har oplyst f&oslash;gende: </p><br />
-    <p>###NAME_VAL###</p>
-    <p>Email-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p>
+    <h3>Henvendelse via egnsnettets kontaktformular</h3>
+    <p>###NAME_VAL### (<a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a>) har sendt f&oslash;lgende:</p><br />
+    <p>Vedr: ###SUBJECT_VAL###</p>
+    <p>###BESKED_VAL###</p>
     <hr />
     <p style="font-size:small">Fremsendt med TMailform extension<br />
-    ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, bestillers aktuelle IP-adresse: ###_IP###</p>
+    ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, brugers aktuelle IP-adresse: ###_IP###</p>
 
 	<!-- ###TMAIL_MAIL_HTML### end -->
     
@@ -106,20 +127,16 @@
 <p><em>Usercopy txt</em></p>    
     
     <!-- ###TMAIL_MAIL_USERCOPY### begin -->
-    Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!
-    Dette er en kopi af den fremsendte bestilling.
+    Kvittering for kontakt til egnsnettet - Tak for din henvendelse!
+    Dette er en kopi af det fremsendte.
     
-    Du har oplyst:
+    Du, ###NAME_VAL### (###EMAIL_VAL###), har afsendt:
     
-    ###COMPANY_VAL###
-    ###NAME_VAL### ###SURNAME_VAL###
-    ###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###
-    ###PHONE_VAL###
-    ###MOBILE_VAL###
-    Eksisterende mail-adresse: ###EMAIL_VAL###
-    Egnsnet-mailadresse: ###NEWMAIL_VAL###@###NEWMAILDOMAIN_VAL###.dk
+    ###SUBJECT_VAL###
     
-    Du vil blive kontktet af os snarest muligt.
+    ###BESKED_VAL###
+    
+    Du vil blive kontaktet af os snarest muligt.
 	
     mvh egnsnettet
 	-----------------    
@@ -130,16 +147,11 @@
 <p><em>Usercopy html</em></p>    
 
     <!-- ###TMAIL_MAIL_USERCOPY_HTML### begin -->
-    <h3>Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!</h3>
-    <h4>Dette er en kopi af den fremsendte bestilling</h4>
-    <p>Du har oplyst f&oslash;gende: </p><br />
-    <p>###COMPANY_VAL###</p>
-    <p>###NAME_VAL### ###SURNAME_VAL###</p>
-    <p>###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###</p><br />
-    <p>###PHONE_VAL###</p>
-    <p>###MOBILE_VAL###</p><br />
-    <p>Nuv&aelig;rende mail-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p>
-    <p>&Oslash;nsket mailadresse: ###NEWMAIL_VAL###@###NEWMAILDOMAIN_VAL###.dk</p><br />
+    <h3>Kvittering for kontakt til egnsnettet - Tak for din henvendelse!</h3>
+    <h4>Dette er en kopi af det fremsendte</h4>
+    <p>Du, ###NAME_VAL### (<a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a>), har afsendt f&oslash;lgende: </p><br />
+    <p>Emne: ###SUBJECT_VAL###</p>
+    <p>###BESKED_VAL###</p><br />
     <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p><br />
 	<p>mvh egnsnettet</p>
     <hr />
@@ -150,7 +162,7 @@
 <p><em>Respons</em></p>        
     
     <!-- ###TMAIL_THANKS### begin -->
-    <h3>Tak for din bestilling</h3>
+    <h3>Tak for din henvendelse!</h3>
     <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p>
 	<!-- ###TMAIL_THANKS### end -->
     

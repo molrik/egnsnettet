@@ -40,20 +40,20 @@
       </td>
     </tr>
     <tr>
-      <td><label for="address" class="egn_inputlabel egn_mandatory">Adressse:</label></td>
+      <td><label for="address" class="egn_inputlabel">Adresse:</label></td>
       <td width="5">&nbsp;</td>
       <td>
-      	<input type="text" name="tx_pilmailform_pi1[text][address]" value="###ADDRESS_VAL###" id="address" class="egn_textinput egn_mandatory" />
+      	<input type="text" name="tx_pilmailform_pi1[text][address]" value="###ADDRESS_VAL###" id="address" class="egn_textinput" />
       </td>
       <td>
         <span class="alert">###ADDRESS_ERR_TXT###</span>        
       </td>
     </tr>
     <tr>
-      <td><label for="zipandtown" class="egn_inputlabel egn_mandatory">Postnummer og by:</label></td>
+      <td><label for="zipandtown" class="egn_inputlabel">Postnummer og by:</label></td>
       <td width="5">&nbsp;</td>
       <td>
-      	<input type="text" name="tx_pilmailform_pi1[text][zipandtown]" value="###ZIPANDTOWN_VAL###" id="zipandtown" class="egn_textinput egn_mandatory" />
+      	<input type="text" name="tx_pilmailform_pi1[text][zipandtown]" value="###ZIPANDTOWN_VAL###" id="zipandtown" class="egn_textinput" />
       </td>
       <td>
         <span class="alert">###ZIPANDTOWN_ERR_TXT###</span>
@@ -99,11 +99,12 @@
        <span class="alert"><!-- ###HEADER_EMAIL_INVALID### begin -->Dette er ikke en gyldig mail-adresse!<!-- ###HEADER_EMAIL_INVALID### end --> ###EMAIL_ERR_TXT###</span>
       </td>
     </tr>
+    <tr class="egn_spacerrow"><td colspan="4" class="egn_spacercell" height="10"> </td></tr>
     <tr>
-      <td><label for="newmail" class="egn_inputlabel">&Oslash;nsket e-mail adresse:</label></td>
-      <td>&nbsp;</td>
-      <td>
-      <input type="text" name="tx_pilmailform_pi1[text][newmail]" value="###NEWMAIL_VAL###" id="newmail" class="egn_textinput" />
+      <td><label for="newmail" class="egn_inputlabel egn_mandatory">&Oslash;nsket e-mail adresse:</label></td>
+      <td width="5">&nbsp;</td>
+      <td colspan="2">
+      <input type="text" name="tx_pilmailform_pi1[text][newmail]" value="###NEWMAIL_VAL###" id="newmail" class="egn_textinput egn_mandatory" />
       <span class="egn_snabela">@</span>
       	<label for="newmaildomain" class="egn_hiddenlabel" style="display:none">Dom&aelig;ne:</label>
         <select name="tx_pilmailform_pi1[select][newmaildomain]" id="newmaildomain">
@@ -112,10 +113,27 @@
           <option value="egnsnet" ###NEWMAILDOMAIN_EGNSNET_VAL###>egnsnet</option>
           <option value="djursnet" ###NEWMAILDOMAIN_DJURSNET_VAL###>djursnet</option>
       </select>
-      <span class="egn_topdomain">.dk</span>
+      <span class="egn_topdomain">.dk</span> <span class="alert">###NEWMAIL_ERR_TXT###</span>
+      </td>
+     </tr>
+    <tr>
+      <td><label for="password1" class="egn_inputlabel egn_mandatory">Indtast kodeord:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="password" name="tx_pilmailform_pi1[text][password1]" value="###PASSWORD1_VAL###" id="password1" class="egn_textinput egn_mandatory" />
       </td>
       <td>
-      <span class="alert">###NEWMAIL_ERR_TXT###</span>
+        <span class="alert">###PASSWORD1_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="password2" class="egn_inputlabel egn_mandatory">Indtast kodeord igen:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="password" name="tx_pilmailform_pi1[text][password2]" value="###PASSWORD2_VAL###" id="password2" class="egn_textinput egn_mandatory" />
+      </td>
+      <td>
+        <span class="alert">###PASSWORD2_ERR_TXT###</span>
       </td>
     </tr>
     <tr>

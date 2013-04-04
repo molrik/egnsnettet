@@ -28,7 +28,7 @@
 			<label index="label_header_err">Du mangler at udfylde nogle nødvendige felter</label>
 			<label index="label_multi_recipient">Vælg modtager</label>
 			<label index="label_name">Dit fornavn</label>
-			<label index="label_sirname">Dit efternavn</label>
+			<label index="label_surname">Dit efternavn</label>
 			<label index="label_email">Din email</label>
 			<label index="label_user_type">Brugertype</label>
 			<label index="label_level">Dit Typo3 niveau</label>
