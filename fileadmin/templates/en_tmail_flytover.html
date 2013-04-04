@@ -1,0 +1,377 @@
+<!-- ###TMAIL_FORM### begin -->
+<html>
+  <head>
+    <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  </head>
+  <body>
+    <form action="###FORM_URL###" method="post" enctype="multipart/form-data"> <input
+        name="MAX_FILE_SIZE"
+        value="300000000"
+        type="hidden">
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" class="egn_flytover_formular_tabel">
+      	<tr>
+        	<td colspan="4">        
+      		<!-- ###HEADER_STD### begin -->
+			<span class="egn_labels">###_LL_LABEL_HEADER_STD###</span>
+          	<!-- ###HEADER_STD### end -->
+          	<!-- ###HEADER_ERR### begin -->
+            <span class="egn_labels alert">###_LL_LABEL_HEADER_ERR###</span>
+            <!-- ###HEADER_ERR### end -->
+            </td>
+        </tr>
+    <tr class="egn_subtable"><td colspan="4" class="egn_form_subheader">Nuv&aelig;rende adresse/bruger:</td></tr>    
+    <tr class="egn_subtable_top">
+      <td class="firstcol toprow"><label for="name" class="egn_inputlabel egn_mandatory">Fornavn:</label></td>
+      <td class="toprow" width="5">&nbsp;</td>
+      <td class="toprow">
+      	<input type="text" name="tx_pilmailform_pi1[text][name]" value="###NAME_VAL###" id="name" class="egn_textinput egn_mandatory" />
+      </td>
+      <td class="lastcol toprow">
+        <span class="alert">###NAME_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="surname" class="egn_inputlabel egn_mandatory">Efternavn:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][surname]" value="###SURNAME_VAL###" id="surname" class="egn_textinput egn_mandatory" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###SURNAME_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="address" class="egn_inputlabel egn_mandatory">Adressse:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][address]" value="###ADDRESS_VAL###" id="address" class="egn_textinput egn_mandatory" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###ADDRESS_ERR_TXT###</span>        
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="zipandtown" class="egn_inputlabel egn_mandatory">Postnummer og by:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][zipandtown]" value="###ZIPANDTOWN_VAL###" id="zipandtown" class="egn_textinput egn_mandatory" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###ZIPANDTOWN_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="member" class="egn_inputlabel egn_mandatory">Medlemsnummer:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][member]" value="###MEMBER_VAL###" id="member" class="egn_textinput egn_mandatory" /><span class="egn_member_info">&nbsp;</span>
+      </td>
+      <td class="lastcol">
+        <span class="alert">###MEMBER_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="phone" class="egn_inputlabel">Telefon:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][phone]" value="###PHONE_VAL###" id="phone" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###PHONE_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="mobile" class="egn_inputlabel">Mobiltelefon:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][mobile]" value="###MOBILE_VAL###" id="mobile" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###MOBILE_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="email" class="egn_inputlabel"><acronym title="Som der kan svares p&aring;">E-mail adresse:</acronym></label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][email]" value="###EMAIL_VAL###" id="email" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert"><!-- ###HEADER_EMAIL_INVALID### begin -->Dette er ikke en gyldig mail-adresse!<!-- ###HEADER_EMAIL_INVALID### end --> ###EMAIL_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_bottom"><td colspan="4" class="firstcol lastcol bottomrow" height="3"> </td></tr>
+    <tr class="egn_spacerrow"><td colspan="4" class="egn_spacercell" height="5"> </td></tr>
+    
+    <tr>    	
+      <td class=""><label for="movetype" class="egn_inputlabel egn_mandatory">Jeg &oslash;nsker at</label></td>
+      <td width="5">&nbsp;</td>
+      <td colspan="2">
+		<input type="radio" name="tx_pilmailform_pi1[radio][movetype]" value="flytte" ###MOVETYPE_FLYTTE_VAL### /> Flytte min forbindelse til:
+		<br />
+		<input type="radio" name="tx_pilmailform_pi1[radio][movetype]" value="overdrage" ###MOVETYPE_OVERDRAGE_VAL### /> Overdrage min forbindelse til:
+		<br />
+        <span class="alert egn_mandatory">###MOVETYPE_ERR_TXT###</span>		
+      </td>
+   	</tr>
+ 
+   	<tr><td colspan="4" class="egn_form_subheader">Fremtidig adresse/bruger:</td></tr>    
+<!-- -->
+    <tr class="egn_subtable_top">
+      <td class="firstcol toprow"><label for="newname" class="egn_inputlabel">Fornavn:</label></td>
+      <td class="toprow" width="5">&nbsp;</td>
+      <td class="toprow">
+      	<input type="text" name="tx_pilmailform_pi1[text][newname]" value="###NEWNAME_VAL###" id="newname" class="egn_textinput" />
+      </td>
+      <td class="lastcol toprow">
+        <span class="alert">###NEWNAME_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newsurname" class="egn_inputlabel">Efternavn:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newsurname]" value="###NEWSURNAME_VAL###" id="newsurname" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###NEWSURNAME_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newaddress" class="egn_inputlabel">Adressse:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newaddress]" value="###NEWADDRESS_VAL###" id="newaddress" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###NEWADDRESS_ERR_TXT###</span>        
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newzipandtown" class="egn_inputlabel">Postnummer og by:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newzipandtown]" value="###NEWZIPANDTOWN_VAL###" id="newzipandtown" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###NEWZIPANDTOWN_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newphone" class="egn_inputlabel">Telefon:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newphone]" value="###NEWPHONE_VAL###" id="newphone" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###NEWPHONE_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newmobile" class="egn_inputlabel">Mobiltelefon:</label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newmobile]" value="###NEWMOBILE_VAL###" id="newmobile" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert">###NEWMOBILE_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_center">
+      <td class="firstcol"><label for="newemail" class="egn_inputlabel"><acronym title="Som der kan svares p&aring;">E-mail adresse:</acronym></label></td>
+      <td width="5">&nbsp;</td>
+      <td>
+      	<input type="text" name="tx_pilmailform_pi1[text][newemail]" value="###NEWEMAIL_VAL###" id="newemail" class="egn_textinput" />
+      </td>
+      <td class="lastcol">
+        <span class="alert"><!-- ###HEADER_EMAIL_INVALID### begin -->Dette er ikke en gyldig mail-adresse!<!-- ###HEADER_EMAIL_INVALID### end --> ###NEWEMAIL_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr class="egn_subtable_bottom"><td colspan="4" class="firstcol lastcol bottomrow" height="3"> </td></tr>
+    <tr class="egn_spacerrow"><td colspan="4" class="egn_spacercell" height="5"> </td></tr>
+    <tr class="">
+      <td class=""><label for="newsup" class="egn_inputlabel">Supplerende oplysninger:</label></td>
+      <td width="5">&nbsp;</td>
+      <td colspan="2" class="">
+      	<textarea name="tx_pilmailform_pi1[textarea][newsup]" cols="30" rows="7">###NEWSUP_VAL###</textarea><span class="alert">###NEWSUP_ERR_TXT###</span>
+      </td>
+    </tr>
+
+<!-- -->
+    <tr>
+      <td colspan="4">
+         <div class="static_info">###_STATICINFO###</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">     
+		<!--###CAPTCHA_INSERT### this subpart is removed if CAPTCHA is not enabled! -->
+        <div class="tx_pilmailform_pi1-captcha">
+            <label for="tx_pilmailform_pi1_captcha_response">###SR_FREECAP_NOTICE###</label>
+            ###SR_FREECAP_CANT_READ###
+            <br />
+            ###SR_FREECAP_IMAGE###
+            <input type="text" size="15" id="tx_pilmailform_pi1_captcha_response" name="tx_pilmailform_pi1[captcha_response]" title="###SR_FREECAP_NOTICE###" value=""  class="egn_textinput" />
+            ###SR_FREECAP_ACCESSIBLE###
+        </div>      
+      	<!--###CAPTCHA_INSERT###-->
+      </td>
+    </tr>
+    <tr>
+      <td><label for="submit_bestil" class="egn_hiddenlabel">Opsig</label></td>
+      <td>&nbsp;</td>
+      <td>
+      <input type="submit" name="tx_pilmailform_pi1[submit]" id="submit_opsig" value="Send" /></td>
+      </td>
+      <td>
+    </tr>
+  </table>
+    </form>
+    <!-- ###TMAIL_FORM### end -->
+
+<hr />
+<p><em>Mail txt</em></p>
+
+    <!-- ###TMAIL_MAIL### begin -->
+    Flytning/overdragelse af internet.
+    
+    Bestilleren har oplyst:
+    
+    Aktuel bruger/adresse:
+    
+    ###NAME_VAL### ###SURNAME_VAL###
+    ###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###
+    Medlemsnummer: ###MEMBER_VAL###
+    E-mail-adresse: ###EMAIL_VAL###
+    Telefon: ###PHONE_VAL###
+    Mobil: ###MOBILE_VAL###
+    
+    Vil gerne ###MOVETYPE_VAL### til
+
+    Fremtidig bruger/adresse:
+    
+    ###NEWNAME_VAL### ###NEWSURNAME_VAL###
+    ###NEWADDRESS_VAL###, ###NEWZIPANDTOWN_VAL###
+    E-mail-adresse: ###NEWEMAIL_VAL###
+    Telefon: ###NEWPHONE_VAL###
+    Mobil: ###NEWMOBILE_VAL###
+    
+    ###NEWSUP_VAL###
+    
+    ----------------
+    
+    Fremsendt med TMailform extension ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, bestillers aktuelle IP-adresse: ###_IP###
+    
+	<!-- ###TMAIL_MAIL### end -->
+
+<hr />
+<p><em>Mail html</em></p>
+    
+    <!-- ###TMAIL_MAIL_HTML### begin -->
+    <h3>Flytning/overdragelse af internet</h3>
+    <p>Bestilleren har oplyst f&oslash;gende: </p>
+    <p>Aktuel bruger/adresse:</p><br />
+    <p>###NAME_VAL### ###SURNAME_VAL###</p>
+    <p>###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###</p>
+    <p>Medlemsnummer: ###MEMBER_VAL###</p>
+    <p>Telefon: ###PHONE_VAL###</p>
+    <p>Mobil: ###MOBILE_VAL###</p>
+    <p>Email-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p><br />
+    <p>Vil gerne ###MOVETYPE_VAL### til</p><br />
+    <p>Fremtidig bruger/adresse:</p><br />
+    <p>###NEWNAME_VAL### ###NEWSURNAME_VAL###</p>
+    <p>###NEWADDRESS_VAL###, ###NEWZIPANDTOWN_VAL###</p>
+    <p>E-mail-adresse: ###NEWEMAIL_VAL###</p>
+    <p>Telefon: ###NEWPHONE_VAL###</p>
+    <p>Mobil: ###NEWMOBILE_VAL###</p>
+    <p>###NEWSUP_VAL###</p>
+    <hr />
+
+    <p style="font-size:small">Fremsendt med TMailform extension<br />
+    ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, bestillers aktuelle IP-adresse: ###_IP###</p>
+
+	<!-- ###TMAIL_MAIL_HTML### end -->
+    
+<hr />
+<p><em>Usercopy txt</em></p>    
+    
+    <!-- ###TMAIL_MAIL_USERCOPY### begin -->
+    Kvittering for Flytning/overdragelse af internet hos egnsnettet.
+    Dette er en kopi af den fremsendte Flytning/overdragelse.
+    
+    Du har oplyst:
+
+    Aktuel bruger/adresse:
+        
+    ###NAME_VAL### ###SURNAME_VAL###
+    ###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###
+    Medlemsnummer: ###MEMBER_VAL###
+    E-mail-adresse: ###EMAIL_VAL###
+    Telefon: ###PHONE_VAL###
+    Mobil: ###MOBILE_VAL###
+
+    Vil gerne ###MOVETYPE_VAL### til
+
+    Fremtidig bruger/adresse:
+    
+    ###NEWNAME_VAL### ###NEWSURNAME_VAL###
+    ###NEWADDRESS_VAL###, ###NEWZIPANDTOWN_VAL###
+    E-mail-adresse: ###NEWEMAIL_VAL###
+    Telefon: ###NEWPHONE_VAL###
+    Mobil: ###NEWMOBILE_VAL###
+    
+    ###NEWSUP_VAL###    
+    
+    Du vil blive kontaktet af os snarest muligt.
+	
+    mvh egnsnettet
+	-----------------    
+	Afsendt ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###
+    <!-- ###TMAIL_MAIL_USERCOPY### end -->
+
+<hr />
+<p><em>Usercopy html</em></p>    
+
+    <!-- ###TMAIL_MAIL_USERCOPY_HTML### begin -->
+    <h3>Kvittering for Flytning/overdragelse af internet hos egnsnettet.</h3>
+    <h4>Dette er en kopi af den fremsendte Flytning/overdragelse.</h4>
+    <p>Du har oplyst f&oslash;gende: </p>
+    <p>Aktuel bruger/adresse:</p><br />
+    <p>###NAME_VAL### ###SURNAME_VAL###</p>
+    <p>###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###</p>
+    <p>Medlemsnummer: ###MEMBER_VAL###</p>
+    <p>Telefon: ###PHONE_VAL###</p>
+    <p>Mobil: ###MOBILE_VAL###</p>
+    <p>Email-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p><br />
+    <p>Vil gerne ###MOVETYPE_VAL### til</p><br />
+    <p>Fremtidig bruger/adresse:</p><br />
+    <p>###NEWNAME_VAL### ###NEWSURNAME_VAL###</p>
+    <p>###NEWADDRESS_VAL###, ###NEWZIPANDTOWN_VAL###</p>
+    <p>E-mail-adresse: ###NEWEMAIL_VAL###</p>
+    <p>Telefon: ###NEWPHONE_VAL###</p>
+    <p>Mobil: ###NEWMOBILE_VAL###</p>
+    <p>###NEWSUP_VAL###</p>
+    <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p><br />
+	<p>mvh egnsnettet</p>
+    <hr />
+<p style="font-size:small">Afsendt ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###</p>
+    <!-- ###TMAIL_MAIL_USERCOPY_HTML### end -->
+    
+<hr />
+<p><em>Respons</em></p>        
+    
+    <!-- ###TMAIL_THANKS### begin -->
+    <h3>Tak for at du benyttede formularen.</h3>
+    <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p>
+	<!-- ###TMAIL_THANKS### end -->
+    
+<hr />
+<p><em>Fejl</em></p>            
+    
+    <!-- ###TMAIL_ERROR### begin -->
+    <h3>Beklager</h3>
+    <p>Der skete tilsyneladende en intern fejl under afsendelsen. G&oslash;r venligst et nyt fors&oslash;g.</p>
+  <!-- ###TMAIL_ERROR### end -->
+    
+  </body>
+</html>

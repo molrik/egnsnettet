@@ -1,0 +1,166 @@
+<!-- ###TMAIL_FORM### begin -->
+<html>
+  <head>
+    <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  </head>
+  <body>
+    <form action="###FORM_URL###" method="post" enctype="multipart/form-data"> <input
+        name="MAX_FILE_SIZE"
+        value="300000000"
+        type="hidden">
+      <table width="100%" border="0" cellspacing="2" cellpadding="0">
+      	<tr>
+        	<td colspan="3">        
+      		<!-- ###HEADER_STD### begin -->
+			<span class="egn_labels">###_LL_LABEL_HEADER_STD###</span>
+          	<!-- ###HEADER_STD### end -->
+          	<!-- ###HEADER_ERR### begin -->
+            <span class="egn_labels alert">###_LL_LABEL_HEADER_ERR###</span>
+            <!-- ###HEADER_ERR### end -->
+            </td>
+        </tr>
+    <tr>
+      <td colspan="3"><label for="name" class="egn_inputlabel egn_mandatory">Indtast dit navn:</label></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<input type="text" name="tx_pilmailform_pi1[text][name]" value="###NAME_VAL###" id="name" class="egn_textinput egn_mandatory" />
+      </td>
+      <td>
+        <span class="alert">###NAME_ERR_TXT###</span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><label for="email" class="egn_inputlabel"><acronym title="Som der kan svares til">Din e-mail adresse:</acronym></label></td>
+   </tr>
+   <tr>
+      <td colspan="2">
+      	<input type="text" name="tx_pilmailform_pi1[text][email]" value="###EMAIL_VAL###" id="email" class="egn_textinput" />
+      </td>
+      <td>	
+        <span class="alert"><!-- ###HEADER_EMAIL_INVALID### begin -->Dette er ikke en gyldig mail-adresse!<!-- ###HEADER_EMAIL_INVALID### end --> ###EMAIL_ERR_TXT###</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+         <div class="static_info">###_STATICINFO###</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">     
+		<!--###CAPTCHA_INSERT### this subpart is removed if CAPTCHA is not enabled! -->
+        <div class="tx_pilmailform_pi1-captcha">
+            <label for="tx_pilmailform_pi1_captcha_response">###SR_FREECAP_NOTICE###</label>
+            ###SR_FREECAP_CANT_READ###
+            <br />
+            ###SR_FREECAP_IMAGE###
+            <input type="text" size="15" id="tx_pilmailform_pi1_captcha_response" name="tx_pilmailform_pi1[captcha_response]" title="###SR_FREECAP_NOTICE###" value=""  class="egn_textinput" />
+            ###SR_FREECAP_ACCESSIBLE###
+        </div>      
+      	<!--###CAPTCHA_INSERT###-->
+      </td>
+    </tr>
+    <tr>
+      <td><label for="submit_kontakt" class="egn_hiddenlabel">Send</label></td>
+      <td>&nbsp;</td>
+      <td>
+      <input type="submit" name="tx_pilmailform_pi1[submit]" id="submit_kontakt" value="Send" /></td>
+    </tr>
+  </table>
+    </form>
+    <!-- ###TMAIL_FORM### end -->
+
+<hr />
+<p><em>Mail txt</em></p>
+
+    <!-- ###TMAIL_MAIL### begin -->
+    Kontaktformular.
+    
+    Brugeren har oplyst:
+    
+    ###NAME_VAL###
+    ###EMAIL_VAL###
+    
+    ----------------
+    
+    Fremsendt med TMailform extension ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, brugers aktuelle IP-adresse: ###_IP###
+    
+	<!-- ###TMAIL_MAIL### end -->
+
+<hr />
+<p><em>Mail html</em></p>
+    
+    <!-- ###TMAIL_MAIL_HTML### begin -->
+    <h3>Kontaktformular</h3>
+    <p>Bruger har oplyst f&oslash;gende: </p><br />
+    <p>###NAME_VAL###</p>
+    <p>Email-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p>
+    <hr />
+    <p style="font-size:small">Fremsendt med TMailform extension<br />
+    ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###, bestillers aktuelle IP-adresse: ###_IP###</p>
+
+	<!-- ###TMAIL_MAIL_HTML### end -->
+    
+<hr />
+<p><em>Usercopy txt</em></p>    
+    
+    <!-- ###TMAIL_MAIL_USERCOPY### begin -->
+    Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!
+    Dette er en kopi af den fremsendte bestilling.
+    
+    Du har oplyst:
+    
+    ###COMPANY_VAL###
+    ###NAME_VAL### ###SURNAME_VAL###
+    ###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###
+    ###PHONE_VAL###
+    ###MOBILE_VAL###
+    Eksisterende mail-adresse: ###EMAIL_VAL###
+    Egnsnet-mailadresse: ###NEWMAIL_VAL###@###NEWMAILDOMAIN_VAL###.dk
+    
+    Du vil blive kontktet af os snarest muligt.
+	
+    mvh egnsnettet
+	-----------------    
+	Afsendt ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###
+    <!-- ###TMAIL_MAIL_USERCOPY### end -->
+
+<hr />
+<p><em>Usercopy html</em></p>    
+
+    <!-- ###TMAIL_MAIL_USERCOPY_HTML### begin -->
+    <h3>Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!</h3>
+    <h4>Dette er en kopi af den fremsendte bestilling</h4>
+    <p>Du har oplyst f&oslash;gende: </p><br />
+    <p>###COMPANY_VAL###</p>
+    <p>###NAME_VAL### ###SURNAME_VAL###</p>
+    <p>###ADDRESS_VAL###, ###ZIPANDTOWN_VAL###</p><br />
+    <p>###PHONE_VAL###</p>
+    <p>###MOBILE_VAL###</p><br />
+    <p>Nuv&aelig;rende mail-adresse: <a href="mailto:###EMAIL_VAL###">###EMAIL_VAL###</a></p>
+    <p>&Oslash;nsket mailadresse: ###NEWMAIL_VAL###@###NEWMAILDOMAIN_VAL###.dk</p><br />
+    <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p><br />
+	<p>mvh egnsnettet</p>
+    <hr />
+<p style="font-size:small">Afsendt ###_TIME###, ###_DATE### fra ###_SITE### ###_PATH###</p>
+    <!-- ###TMAIL_MAIL_USERCOPY_HTML### end -->
+    
+<hr />
+<p><em>Respons</em></p>        
+    
+    <!-- ###TMAIL_THANKS### begin -->
+    <h3>Tak for din bestilling</h3>
+    <p>Du vil h&oslash;re n&aelig;rmere fra os snarest muligt.</p>
+	<!-- ###TMAIL_THANKS### end -->
+    
+<hr />
+<p><em>Fejl</em></p>            
+    
+    <!-- ###TMAIL_ERROR### begin -->
+    <h3>Beklager</h3>
+    <p>Der skete tilsyneladende en intern fejl under afsendelsen. G&oslash;r venligst et nyt fors&oslash;g.</p>
+  <!-- ###TMAIL_ERROR### end -->
+    
+  </body>
+</html>
