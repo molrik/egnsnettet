@@ -14,10 +14,10 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'TMailform',
-	'description' => 'Template-based mailform that aims to give the developer the highest amount of design flexibility. Originally written by Tonni Aagesen (pil.dk).',
+	'description' => 'Template-based mailform that aims to give the developer the highest amount of design flexibility. Originally written by Tonni Aagesen (pil.dk). Modified by Mikkel Olrik, Molrik Data',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '3.1.0',
+	'version' => '3.1.1',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',

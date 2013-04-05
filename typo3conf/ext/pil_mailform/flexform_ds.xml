@@ -222,7 +222,7 @@
 								<cols>50</cols>
 								<rows>6</rows>
 							</config>
-							<defaultExtras>richtext[cut|copy|paste|formatblock|bold|italic|underline|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image|line|chMode]:rte_transform[mode=css]</defaultExtras>
+							<defaultExtras>richtext[cut|copy|paste|bold|italic|underline|left|center|right|orderedlist|unorderedlist|link|line|chMode]:rte_transform[mode=ts_css]</defaultExtras>
 						</TCEforms>
 					</staticInfo>
 					<dateMarkerFormat>

@@ -521,7 +521,10 @@ class tx_pilmailform_pi1 extends tslib_pibase {
 		
 		// Remove any left over markers
 		$content = preg_replace("/###.*?###/", '', $content);
-
+        if ($this->localconf['testmode'] == 1) {
+            $content .= '<div>Debug-TEZZZZT:</div>';
+            $content .= t3lib_div::view_array($markers);
+        }
 		return $content;
 	}
 
@@ -604,7 +607,11 @@ class tx_pilmailform_pi1 extends tslib_pibase {
 						}
 					break;
 					case 'notEquals':
-						if ($fval != $markers['###' . $v['exp'] . '###']) {
+                        if ($this->localconf['testmode'] == 1) {    //debug
+                            $markers['test'] = $markers[preg_replace('/\'/', '', '###' . $v['exp'] . '###')];  //debug - preg_replace('/\'/', '', $String); - der kommer anførselstegn med, som skal væk først
+                        }
+                        if ($fval != $markers[preg_replace('/\'/', '', '###' . $v['exp'] . '###')]) {
+                        //if ($fval != $markers['###' . $v['exp'] . '###']) { /* virker ikke helt */
 							$result['is_error'] = true;
 							$result['error_str'] = $v['estr'];
 							$this->errForm = true;

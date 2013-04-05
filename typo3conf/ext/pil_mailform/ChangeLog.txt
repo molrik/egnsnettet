@@ -1,3 +1,7 @@
 2013-04-03 Mikkel Olrik <molrik@molrikdata.dk>
 
 	* 3.1.0 Added extra 'static info' rte-field in flexform_ds.xml, locallang.php (beware of the iso charset, edit in textmate) and pi1.
+	
+2013-04-05 Mikkel Olrik <molrik@molrikdata.dk>
+
+	* 3.1.1 Repaired bug in notEquals validation - by removing superfluous surrounding ' (apostrophe): preg_replace('/\'/', '', '###' . $v['exp'] . '###')
