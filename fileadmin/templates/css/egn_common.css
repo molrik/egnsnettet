@@ -178,3 +178,291 @@ li.egn_subsubmenu_items {
 .egn_2col_innermargin {
 	width: 4%;
 }
+
+/* formularer */
+
+.alert {
+	color:#B00700;
+}
+.egn_hiddenlabel {
+	visibility:hidden;
+}
+.tx-pilmailform-pi1 #acceptterms {
+	margin-left: 0;
+}
+.tx-pilmailform-pi1 .tx-srfreecap-pi2-cant-read {
+	color: #000;
+	font-size: 1em;
+	display: block;
+}
+.tx-pilmailform-pi1 .tx-srfreecap-pi2-cant-read a:link {
+	font-weight: normal;
+	text-decoration: underline;
+}
+.egn_inputlabel.egn_mandatory, .egn_labels.alert, .tx_pilmailform_pi1-captcha #tx_pilmailform_pi1_captcha_response {
+	padding-right: 10px;
+	background-image: url(../grafik/egn_mandatory.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	
+}
+.egn_mandatory_info {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.egn_mandatory_info span.egn_mandatory, .egn_mandatory_info span.detail {
+	background-image: url(../grafik/egn_mandatory.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 2em;
+	padding-right: 5px;
+}
+
+/* Flyt/over */
+
+.egn_flytover_formular_tabel td {
+	vertical-align: top;
+}
+.egn_flytover_formular_tabel .egn_form_subheader {
+	font-weight: bold;
+}
+.egn_flytover_formular_tabel td.firstcol {
+	border-left: solid 1px #999;
+}
+.egn_flytover_formular_tabel td.lastcol {
+	border-right: solid 1px #999;
+}
+.egn_flytover_formular_tabel td.toprow {
+	border-top: solid 1px #999;
+}
+.egn_flytover_formular_tabel td.bottomrow {
+	border-bottom: solid 1px #999;
+}
+
+/* Kontakt */
+
+.egn_kontakt_tabel .egn_kontakt {
+	width: 25em;
+}
+
+/* Kontaktpersoner */
+
+#c101 .contenttable {
+	width: 100%;
+}
+#c101 .contenttable p {
+	margin: 0;
+}
+#c101 .contenttable th {
+	text-align: left;
+}
+#c101 .contenttable .tr-even {
+	background-color: #EEE;
+}
+#c101 .contenttable .tr-odd {
+	background-color: #DDD;
+}
+
+/* Ny email */
+
+.egn_mailbestilling_tabel td {
+	vertical-align: top;
+}
+.egn_mailbestilling_tabel #kodeordet,
+.egn_styrke_holder,
+.egn_mailbestilling_tabel #scorebarBorder {
+	float: left;
+}
+.egn_mailbestilling_tabel #scorebarBorder {
+	margin-left: 5px;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+.egn_password_holder {
+	white-space: nowrap;
+}
+
+
+/* pwcheck */
+
+#linkstop {
+	background: #234;
+	color: #fff;
+	margin-top: -10px;
+	padding: 2px;
+}
+#linkstop a {
+	color: #fff;
+}
+#score {
+	color: #000;
+	font-size: 85%;
+	position:absolute;
+	text-align: center;
+	width: 100px;
+	z-index: 10;
+	height: 16px;
+	line-height: 1.3em;
+}
+#score,#rating,#standards {
+	font-weight: bold;
+}
+div.exceed {
+	background-image: url(../grafik/img_status_exceed.png);
+}
+div.fail {
+	background-image: url(../grafik/img_status_fail.png);
+}
+div.pass {
+	background-image: url(../grafik/img_status_pass.png);
+}
+div.warn {
+	background-image: url(../grafik/img_status_warn.png);
+}
+#scorebar {
+	background-image: url(../grafik/bg_strength_gradient.jpg);
+	background-repeat:repeat-y;
+	background-position: 0 0;
+	position:absolute;
+	width: 100px;
+	z-index: 0;
+	height: 16px;
+}
+#scorebarBorder {
+	background: #333;
+	border: 1px #000 solid;
+	height: 16px;
+	margin-bottom: 2px;
+	width: 100px;
+	overflow: hidden;
+}
+#password {
+	border: 1px #000 solid;
+	font-size: 85%;
+	width: 100px;
+}
+#tablePwdScoring {
+	margin-bottom: 0 !important;
+}
+#listLegend li {
+	list-style: none;
+	padding-bottom: 4px;
+	margin-left: 0;
+	padding-left: 0;
+}
+#listLegend {
+	margin-left: 0;
+	padding-left: 0;
+}
+div.fail,div.pass,div.exceed,div.warn {
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 16px;
+}
+td.exceed,td.fail,td.pass,td.warn {
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+td.exceed {
+	background: #1C60A4;
+}
+td.fail {
+	background: #C00;
+}
+td.pass {
+	background: #093;
+}
+td.warn {
+	background: #f60;
+}
+div.box {
+	background: #456;
+	border: 1px #000 solid;
+	color: #fff;
+	height: 16px;
+	padding: 2px;
+	white-space: nowrap;
+	width: 38px;
+}
+div.boxMinus,div.boxPlus {
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px;
+	text-align: left;
+	white-space: nowrap;
+}
+td.footnote {
+	background: #ddd;
+	font-size: 70%;
+}
+.bold {
+	font-weight: bold;
+}
+.clearNone {
+	clear: none;
+}
+.floatRight {
+	float: right;
+}
+.floatLeft {
+	float: left;
+}
+.hide {
+	display: none;
+}
+.imgLegend {
+	clear: left !important;
+	float: left !important;
+	position: relative !important;
+	margin-bottom: -3px !important;
+	margin-right: 5px !important;
+}
+.inline {
+	display: inline;
+}
+.italic {
+	font-style: italic;
+}
+.noPad {
+	padding: 0;
+}
+.show {
+	display: inline !important;
+}
+.txtLg {
+	font-size: 125%;
+}
+.txtSmall {
+	font-size: 75%;
+}
+.txtCenter {
+	text-align: center;
+}
+.txtRight {
+	text-align: right;
+}
+div.xtend {
+	clear: both !important; 
+	line-height: 0; 
+	height: 0;
+}
+
+/* disable */
+
+#tablePwdNotes {
+	display: none;
+}
+#tablePwdStatus {
+	padding: 5px;
+	border: solid 1px #333;
+	margin-bottom: 10px;
+	border-collapse: collapse;
+}
+#egn_scorecalc_holder #tablePwdStatus {
+	display: none;	
+}

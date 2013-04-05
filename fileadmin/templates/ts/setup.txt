@@ -1,0 +1,11 @@
+#page.shortcutIcon = fileadmin/templates/grafik/molrik16trans.ico
+
+page.includeCSS{
+  file1 >
+  file2 >
+  #file3 = fileadmin/templates/css/global.css
+  #file3.media = screen
+}
+#page.includeJSlibs.jquery = fileadmin/shared/js/jquery-1.7.2.min.js
+page.includeJS.pwc = fileadmin/templates/js/pwdmeter.js
+
