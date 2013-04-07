@@ -458,11 +458,96 @@ div.xtend {
 	display: none;
 }
 #tablePwdStatus {
-	padding: 5px;
-	border: solid 1px #333;
+	padding: 10px;
 	margin-bottom: 10px;
-	border-collapse: collapse;
+	margin-top: 10px;
+	line-height: normal;
+	border: dashed 1px #999;
 }
 #egn_scorecalc_holder #tablePwdStatus {
 	display: none;	
 }
+/* PWD-DIV */
+
+div.tr {
+	clear:both;
+	border-top: solid 1px #CCC;
+}
+div.tr div {
+	float:left;
+}
+.th {
+	font-weight:bold;
+	text-align:center;
+}
+div.box {
+	background-color:transparent;
+	color:#000;
+	border:none;
+	text-align:right;
+	padding:0;
+}
+
+.c1 {
+	width: 4%;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c2 {
+	width:46%;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c3 {
+	width: 14%;
+	background-color:#DDD;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c4 {
+	width: 18%;
+	background-color:#EEE;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c5 {
+	width: 9%;
+	background-color:#DDD;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c6 {
+	width: 9%;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c12, .c36 {
+	width:50%;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.c16 {
+	width:100%;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+div.boxMinus, div.boxPlus {
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 45px;
+	background-color:transparent;
+	text-align:right;
+}
+div.exceed div {
+	background: #1C60A4;
+}
+div.fail div {
+	background: #C00;
+}
+div.pass div {
+	background: #093;
+}
+div.warn div {
+	background: #f60;
+}
+

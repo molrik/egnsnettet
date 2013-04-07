@@ -116,6 +116,7 @@
       <span class="egn_topdomain">.dk</span> <span class="alert">###NEWMAIL_ERR_TXT###</span>
       </td>
      </tr>
+    <tr class="egn_spacerrow"><td colspan="4" class="egn_spacercell" height="10"> </td></tr>
     <tr>
       <td><label for="kodeordet" class="egn_inputlabel egn_mandatory">Indtast &oslash;nsket kodeord:</label></td>
       <td width="5">&nbsp;</td>
@@ -130,154 +131,183 @@
           <div id="score">0%</div>
           <div id="scorebar">&nbsp;</div>
         </div>
-		<a href="#" id="egn_styrke_show" title="Klik er for at vise eller skjule detaljer">Detaljer</a>
+		<a href="#" id="egn_styrke_show" title="Klik her for at vise detaljer">Detaljer</a>
         <span class="alert">###KODEORDET_ERR_TXT###</span>
       </td>
     </tr>
 	<tr>
-	 <td colspan="2"> </td>	
-	 <td colspan="2">
+	 <td colspan="4">
         <div id="egn_scorecalc_holder">
-        	       <table id="tablePwdStatus" cellpadding="5" cellspacing="1" border="1">
-                <tr>
-                    <th colspan="2">Additions</th>
-                    <th class="txtCenter">Type</th>
-                    <th class="txtCenter">Rate</th>
-                    <th class="txtCenter">Count</th>
-                    <th class="txtCenter">Bonus</th>
-                </tr>
-                <tr>
-                    <td width="1%"><div id="div_nLength" class="fail">&nbsp;</div></td>
-                    <td width="94%">Number of Characters</td>
-                    <td width="1%" class="txtCenter">Flat</td>
-                    <td width="1%" class="txtCenter italic">+(n*4)</td>
-                    <td width="1%"><div id="nLength" class="box">&nbsp;</div></td>
-                    <td width="1%"><div id="nLengthBonus" class="boxPlus">&nbsp;</div></td>
-                </tr>	
-                <tr>
-                    <td><div id="div_nAlphaUC" class="fail">&nbsp;</div></td>
-                    <td>Uppercase Letters</td>
-                    <td class="txtCenter">Cond/Incr</td>
-                    <td nowrap="nowrap" class="txtCenter italic">+((len-n)*2)</td>
-                   <td><div id="nAlphaUC" class="box">&nbsp;</div></td>
-                    <td><div id="nAlphaUCBonus" class="boxPlus">&nbsp;</div></td>
-                </tr>	
-                <tr>
-                    <td><div id="div_nAlphaLC" class="fail">&nbsp;</div></td>
-                    <td>Lowercase Letters</td>
-                    <td class="txtCenter">Cond/Incr</td>
-                    <td class="txtCenter italic">+((len-n)*2)</td>
-                    <td><div id="nAlphaLC" class="box">&nbsp;</div></td>
-                    <td><div id="nAlphaLCBonus" class="boxPlus">&nbsp;</div></td>
-                </tr>
-                <tr>
-                    <td><div id="div_nNumber" class="fail">&nbsp;</div></td>
-                    <td>Numbers</td>
-                    <td class="txtCenter">Cond</td>
-                    <td class="txtCenter italic">+(n*4)</td>
-                    <td><div id="nNumber" class="box">&nbsp;</div></td>
-                    <td><div id="nNumberBonus" class="boxPlus">&nbsp;</div></td>
-               </tr>
-                <tr>
-                    <td><div id="div_nSymbol" class="fail">&nbsp;</div></td>
-                    <td>Symbols</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">+(n*6)</td>
-                    <td><div id="nSymbol" class="box">&nbsp;</div></td>
-                    <td><div id="nSymbolBonus" class="boxPlus">&nbsp;</div></td>
-               </tr>
-                <tr>
-                    <td><div id="div_nMidChar" class="fail">&nbsp;</div></td>
-                    <td>Middle Numbers or Symbols</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">+(n*2)</td>
-                    <td><div id="nMidChar" class="box">&nbsp;</div></td>
-                    <td><div id="nMidCharBonus" class="boxPlus">&nbsp;</div></td>
-               </tr>
-                <tr>
-                    <td><div id="div_nRequirements" class="fail">&nbsp;</div></td>
-                    <td>Requirements</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">+(n*2)</td>
-                    <td><div id="nRequirements" class="box">&nbsp;</div></td>
-                    <td><div id="nRequirementsBonus" class="boxPlus">&nbsp;</div></td>
-               </tr>
-                <tr>
-                    <th colspan="6">Deductions</th>
-                </tr>
-				<tr>
-                    <td width="1%"><div id="div_nAlphasOnly" class="pass">&nbsp;</div></td>
-                    <td width="94%">Letters Only</td>
-                    <td width="1%" class="txtCenter">Flat</td>
-                    <td width="1%" class="txtCenter italic">-n</td>
-                    <td width="1%"><div id="nAlphasOnly" class="box">&nbsp;</div></td>
-                    <td width="1%"><div id="nAlphasOnlyBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nNumbersOnly" class="pass">&nbsp;</div></td>
-                    <td>Numbers Only</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-n</td>
-                    <td><div id="nNumbersOnly" class="box">&nbsp;</div></td>
-                    <td><div id="nNumbersOnlyBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nRepChar" class="pass">&nbsp;</div></td>
-                    <td>Repeat Characters (Case Insensitive)</td>
-                    <td class="txtCenter">Comp</td>
-                    <td nowrap="nowrap" class="txtCenter italic"> - </td>
-                    <td><div id="nRepChar" class="box">&nbsp;</div></td>
-                    <td><div id="nRepCharBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nConsecAlphaUC" class="pass">&nbsp;</div></td>
-                    <td>Consecutive Uppercase Letters</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*2)</td>
-                    <td><div id="nConsecAlphaUC" class="box">&nbsp;</div></td>
-                    <td><div id="nConsecAlphaUCBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nConsecAlphaLC" class="pass">&nbsp;</div></td>
-                    <td>Consecutive Lowercase Letters</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*2)</td>
-                    <td><div id="nConsecAlphaLC" class="box">&nbsp;</div></td>
-                    <td><div id="nConsecAlphaLCBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nConsecNumber" class="pass">&nbsp;</div></td>
-                    <td>Consecutive Numbers</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*2)</td>
-                    <td><div id="nConsecNumber" class="box">&nbsp;</div></td>
-                    <td><div id="nConsecNumberBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nSeqAlpha" class="pass">&nbsp;</div></td>
-                    <td>Sequential Letters (3+)</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*3)</td>
-                    <td><div id="nSeqAlpha" class="box">&nbsp;</div></td>
-                    <td><div id="nSeqAlphaBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nSeqNumber" class="pass">&nbsp;</div></td>
-                    <td>Sequential Numbers (3+)</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*3)</td>
-                    <td><div id="nSeqNumber" class="box">&nbsp;</div></td>
-                    <td><div id="nSeqNumberBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
-				<tr>
-                    <td><div id="div_nSeqSymbol" class="pass">&nbsp;</div></td>
-                    <td>Sequential Symbols (3+)</td>
-                    <td class="txtCenter">Flat</td>
-                    <td class="txtCenter italic">-(n*3)</td>
-                    <td><div id="nSeqSymbol" class="box">&nbsp;</div></td>
-                    <td><div id="nSeqSymbolBonus" class="boxMinus">&nbsp;</div></td>
-				</tr>	
- 			</table>
+             <div id="tablePwdStatus">
+                <div class="tr">
+                    <div class="th colspan2 w95 c12">Tilskud</div>
+                    <div class="th txtCenter w1 c3">Type</div>
+                    <div class="th txtCenter w1 c4">Sats</div>
+                    <div class="th txtCenter w1 c5" >Antal</div>
+                    <div class="th txtCenter w1 c6">Point</div>
+                </div>
+                <div class="tr">
+                    <div class="w1 c1"><div id="div_nLength" class="fail">&nbsp;</div></div>
+                    <div class="w94 c2">Antal tegn</div>
+                    <div class="w1 c3 txtCenter">Flat</div>
+                    <div class="w1 c4 txtCenter italic">+(n*4)</div>
+                    <div class="w1 c5"><div id="nLength" class="box">&nbsp;</div></div>
+                    <div class="w1 c6"><div id="nLengthBonus" class="boxPlus">&nbsp;</div></div>
+                </div>	
+                <div class="tr">
+                    <div class="c1"><div id="div_nAlphaUC" class="fail">&nbsp;</div></div>
+                    <div class="c2">Store bogstaver</div>
+                    <div class="c3 txtCenter">Cond/Incr</div>
+                    <div nowrap="nowrap" class="c4  txtCenter italic">+((len-n)*2)</div>
+                    <div class="c5"><div id="nAlphaUC" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nAlphaUCBonus" class="boxPlus">&nbsp;</div></div>
+                </div>	
+                <div class="tr">
+                    <div class="c1"><div id="div_nAlphaLC" class="fail">&nbsp;</div></div>
+                    <div class="c2">Sm&aring; bogstaver</div>
+                    <div class="txtCenter c3">Cond/Incr</div>
+                    <div class="txtCenter italic c4">+((len-n)*2)</div>
+                    <div class="c5"><div id="nAlphaLC" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nAlphaLCBonus" class="boxPlus">&nbsp;</div></div>
+                </div>
+                <div class="tr">
+                    <div class="c1"><div id="div_nNumber" class="fail">&nbsp;</div></div>
+                    <div class="c2">Cifre</div>
+                    <div class="txtCenter c3">Cond</div>
+                    <div class="txtCenter italic c4">+(n*4)</div>
+                    <div class="c5"><div id="nNumber" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nNumberBonus" class="boxPlus">&nbsp;</div></div>
+               </div>
+                <div class="tr">
+                    <div class="c1"><div id="div_nSymbol" class="fail">&nbsp;</div></div>
+                    <div class="c2">Specialtegn</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">+(n*6)</div>
+                    <div class="c5"><div id="nSymbol" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nSymbolBonus" class="boxPlus">&nbsp;</div></div>
+               </div>
+                <div class="tr">
+                    <div class="c1"><div id="div_nMidChar" class="fail">&nbsp;</div></div>
+                    <div class="c2">Cifre eller specialtegn inde i kodeord</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">+(n*2)</div>
+                    <div class="c5"><div id="nMidChar" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nMidCharBonus" class="boxPlus">&nbsp;</div></div>
+               </div>
+                <div class="tr">
+                    <div class="c1"><div id="div_nRequirements" class="fail">&nbsp;</div></div>
+                    <div class="c2">Minimums-krav opfyldt</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">+(n*2)</div>
+                    <div class="c5"><div id="nRequirements" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nRequirementsBonus" class="boxPlus">&nbsp;</div></div>
+               </div>
+                <div class="tr">
+                    <div class="th colspan6 c12">Fradrag</div>
+                </div>
+				<div class="tr">
+                    <div class="c1"><div id="div_nAlphasOnly" class="pass">&nbsp;</div></div>
+                    <div class="c2">Kun bogstaver</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter c4 italic">-n</div>
+                    <div class="c5"><div id="nAlphasOnly" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nAlphasOnlyBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nNumbersOnly" class="pass">&nbsp;</div></div>
+                    <div class="c2">Kun cifre</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-n</div>
+                    <div class="c5"><div id="nNumbersOnly" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nNumbersOnlyBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nRepChar" class="pass">&nbsp;</div></div>
+                    <div class="c2">Gentagne tegn (store/sm&aring; bogstaver lige gyldige)</div>
+                    <div class="txtCenter c3">Comp</div>
+                    <div nowrap="nowrap" class="txtCenter italic c4"> - </div>
+                    <div class="c5"><div id="nRepChar" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nRepCharBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nConsecAlphaUC" class="pass">&nbsp;</div></div>
+                    <div class="c2">Fortl&oslash;bende store bogstaver</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*2)</div>
+                    <div class="c5"><div id="nConsecAlphaUC" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nConsecAlphaUCBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nConsecAlphaLC" class="pass">&nbsp;</div></div>
+                    <div class="c2">Fortl&oslash;bende sm&aring; bogstaver</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*2)</div>
+                    <div class="c5"><div id="nConsecAlphaLC" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nConsecAlphaLCBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nConsecNumber" class="pass">&nbsp;</div></div>
+                    <div class="c2">Fortl&oslash;bende cifre</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*2)</div>
+                    <div class="c5"><div id="nConsecNumber" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nConsecNumberBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nSeqAlpha" class="pass">&nbsp;</div></div>
+                    <div class="c2">Sekventielle bogstaver (3+)</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*3)</div>
+                    <div class="c5"><div id="nSeqAlpha" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nSeqAlphaBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nSeqNumber" class="pass">&nbsp;</div></div>
+                    <div class="c2">Sekventielle cifre (3+)</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*3)</div>
+                    <div class="c5"><div id="nSeqNumber" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nSeqNumberBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+				<div class="tr">
+                    <div class="c1"><div id="div_nSeqSymbol" class="pass">&nbsp;</div></div>
+                    <div class="c2">Sekventielle specialtegn (3+)</div>
+                    <div class="txtCenter c3">Flat</div>
+                    <div class="txtCenter italic c4">-(n*3)</div>
+                    <div class="c5"><div id="nSeqSymbol" class="box">&nbsp;</div></div>
+                    <div class="c6"><div id="nSeqSymbolBonus" class="boxMinus">&nbsp;</div></div>
+				</div>	
+                <div class="tr">
+                    <div class="th colspan6 c12">Forklaring</div><div class="th c36">Minimums-krav</div>
+                </div>
+                <div class="tr">
+                    <div class="c12">
+                        <ul id="listLegend">
+                            <li><div class="exceed imgLegend">&nbsp;</div> <span class="bold">Enest&aring;ende:</span> Overg&aring;r minimumskrav.</li>
+                            <li><div class="pass imgLegend">&nbsp;</div> <span class="bold">Tilstr&aelig;kkelig:</span> Opfylder minimumskrav.</li>
+                            <li><div class="warn imgLegend">&nbsp;</div> <span class="bold">Advarsel:</span> Dette b&oslash;r s&aring; vidt muligt undg&aring;s.</li>
+                            <li><div class="fail imgLegend">&nbsp;</div> <span class="bold">Utilstr&aelig;kkelig:</span> Opfylder slet ikke minimumskrav.</li>
+                        </ul>
+                    </div>
+                    <div class="c36"> 
+                   		<ul>
+                            <li>Minimum 8 tegn</li>
+                            <li>Indeholdende 3/4 af f&oslash;lgende emner:
+								<ul>
+									<li>Store bogstaver</li>
+                                	<li>Sm&aring; bogstaver</li>
+                                	<li>Cifre/Tal</li>
+                                	<li>Specialtegn</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="tr"> </div>
+                <a href="#" id="egn_pwcdetail_collapse">Skjul detaljer</a>
+			</div>
+
         </div>
       </td>
     </tr>
@@ -348,8 +378,8 @@
 <p><em>Mail html</em></p>
     
     <!-- ###TMAIL_MAIL_HTML### begin -->
-    <h3>Bestilling af internet</h3>
-    <p>Bestilleren har oplyst f&oslash;gende: </p><br />
+    <h3>Bestilling af ny mailadresse</h3>
+    <h4>Bestilleren har oplyst f&oslash;lgende: </h4>
     <p>###NAME_VAL### ###SURNAME_VAL###</p>
    	<p>###ADDRESS_VAL### ###ZIPANDTOWN_VAL###</p>
     <p>Medlemsnummer: ###MEMBER_VAL###</p>
@@ -369,7 +399,7 @@
 <p><em>Usercopy txt</em></p>    
     
     <!-- ###TMAIL_MAIL_USERCOPY### begin -->
-    Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!
+    Kvittering for bestilling af ny mailadresse hos egnsnettet - Tak for din bestilling!
     Dette er en kopi af den fremsendte bestilling.
     
     Du har oplyst:
@@ -394,7 +424,7 @@
 <p><em>Usercopy html</em></p>    
 
     <!-- ###TMAIL_MAIL_USERCOPY_HTML### begin -->
-    <h3>Kvittering for bestilling af internet hos egnsnettet - Tak for din bestilling!</h3>
+    <h3>Kvittering for bestilling af ny mailadresse hos egnsnettet - Tak for din bestilling!</h3>
     <h4>Dette er en kopi af den fremsendte bestilling</h4>
     <p>Du har oplyst f&oslash;gende: </p><br />
     <p>###NAME_VAL### ###SURNAME_VAL###</p>

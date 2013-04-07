@@ -280,11 +280,19 @@ function chkPass(pwd) {
 		
 		/* Determine complexity based on overall score */
 		if (nScore > 100) { nScore = 100; } else if (nScore < 0) { nScore = 0; }
-		if (nScore >= 0 && nScore < 20) { sComplexity = "Very Weak"; }
+		
+		/* if (nScore >= 0 && nScore < 20) { sComplexity = "Very Weak"; }
 		else if (nScore >= 20 && nScore < 40) { sComplexity = "Weak"; }
 		else if (nScore >= 40 && nScore < 60) { sComplexity = "Good"; }
 		else if (nScore >= 60 && nScore < 80) { sComplexity = "Strong"; }
-		else if (nScore >= 80 && nScore <= 100) { sComplexity = "Very Strong"; }
+		else if (nScore >= 80 && nScore <= 100) { sComplexity = "Very Strong"; } org english */
+
+		/* Dansk versionering */
+		if (nScore >= 0 && nScore < 20) { sComplexity = "Meget svag"; }
+		else if (nScore >= 20 && nScore < 40) { sComplexity = "Svag"; }
+		else if (nScore >= 40 && nScore < 60) { sComplexity = "God"; }
+		else if (nScore >= 60 && nScore < 80) { sComplexity = "St&aelig;rk"; }
+		else if (nScore >= 80 && nScore <= 100) { sComplexity = "Meget st&aelig;rk"; }
 		
 		/* Display updated score criteria to client */
 		oScorebar.style.backgroundPosition = "-" + parseInt(nScore * 4) + "px";

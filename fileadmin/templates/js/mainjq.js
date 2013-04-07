@@ -16,9 +16,20 @@ jQuery(document).ready(function() {
 	  jQuery('#egn_pwc_hidescore').show();
 	});
 	
-	jQuery('#egn_styrke_show').click(function (event) {
-	  event.preventDefault();
-	  jQuery('#tablePwdStatus').toggle();
+	jQuery('#egn_styrke_show').toggle(function (event) {
+	  	event.preventDefault();
+	  	jQuery('#tablePwdStatus').slideDown('slow');
+	  	jQuery(this).attr('title', 'Klik igen for at skjule detaljerne');		
+
+	}, function(event) {
+	  	event.preventDefault();
+	  	jQuery('#tablePwdStatus').slideUp();
+	  	jQuery(this).attr('title', 'Klik her for at vise detaljer');
+	});
+
+	jQuery('#egn_pwcdetail_collapse').click(function (event) {
+		event.preventDefault();
+	  	jQuery('#tablePwdStatus').slideUp();		
 	});
 
 }); 
