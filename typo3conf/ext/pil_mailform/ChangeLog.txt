@@ -1,3 +1,11 @@
+2013-06-17 Mikkel Olrik <molrik@molrikdata.dk>
+
+	* 3.1.2 Bugfix: Error handler (FE): PHP : Function eregi() is deprecated - replaced with preg_match
+
+2013-04-07 Mikkel Olrik <molrik@molrikdata.dk>
+
+	* 3.1.1 Form updates
+
 2013-04-03 Mikkel Olrik <molrik@molrikdata.dk>
 
 	* 3.1.0 Added extra 'static info' rte-field in flexform_ds.xml, locallang.php (beware of the iso charset, edit in textmate) and pi1.

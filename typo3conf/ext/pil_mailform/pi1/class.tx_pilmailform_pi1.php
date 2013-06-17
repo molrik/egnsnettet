@@ -549,7 +549,8 @@ class tx_pilmailform_pi1 extends tslib_pibase {
 							$markers['###' . strtoupper($k) . '_ERR###'] = $reqVal['is_error'] ? $this->localconf['errorSubstitution'] : '';
 							$markers['###' . strtoupper($k) . '_ERR_TXT###'] = $reqVal['is_error'] ? $reqVal['error_str'] : '';
 							// Try to detect header injection
-							$this->errForm = (eregi("\r", $v) || eregi("\n", $v)) ? true : $this->errForm;
+							//$this->errForm = (eregi("\r", $v) || eregi("\n", $v)) ? true : $this->errForm; //Core: Error handler (FE): PHP : Function eregi() is deprecated
+                            $this->errForm = (preg_match("/\\r/i", $v) || preg_match("/\\n/i", $v)) ? true : $this->errForm; //preg_match('/\.([^\.]*$)/i', $this->file_src_name, $extension);
 						break;
 						case 'textarea':
 							$markers['###' . strtoupper($k) . '_VAL###'] = !empty($v) || strlen($v) >= 1 ? htmlspecialchars($v) : '';
